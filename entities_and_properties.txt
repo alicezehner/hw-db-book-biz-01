@@ -1,0 +1,80 @@
+/* ENTITIES
+Authors
+Genres
+Orders
+Editors
+Books
+Publishers
+Book_Genres
+Book_Authors
+Book_Editors
+Order_Details
+*/ 
+
+/* ENTITIES AND PROPERTIES
+`Authors`
+	AuthorId (PK)
+	FirstName
+	LastName
+
+`Genres`
+	GenreId (PK)
+	Genre
+
+`Orders`
+	OrderId (PK)
+	CustomerId
+
+`Editors`
+	EditorId (PK)
+	FirstName
+	LastName
+
+`Books`
+	BookId (PK)
+	Title
+	PublisherId (FK)
+	Price
+	Royalty
+
+`Publishers`
+	PublisherId (PK)
+	Name
+
+`Book_Genres`
+	BookId (FK)
+	GenreId (FK)
+
+`Book_Authors`
+	BookId (FK)
+	AuthorId (FK)
+
+`Book_Editors`
+	BookId (FK)
+	EditorId (FK)
+
+`Order_Details`
+	OrderId (FK)
+	BookId (FK)
+*/
+
+/* PKs
+AuthorId
+GenreId
+OrderId
+EditorId
+BookId
+PublisherId
+*/
+
+/* TABLE RELATIONS
+Authors, Book_Authors 1:N
+Books, Book_Authors 1:N
+Editors, Book_Editors 1:N
+Books, Book_Editors 1:N
+Publishers, Books 1:N
+Books, Book_Genres 1:N
+Genres, Book_Genres 1:N
+Orders, Order_Details 1:N
+Books, OrderDetails 1:N
+*/
